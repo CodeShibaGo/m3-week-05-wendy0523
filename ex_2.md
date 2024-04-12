@@ -7,7 +7,12 @@
 Answer
 
 ```sql
-/* SOME SQL STATEMENT  */
+
+SELECT members.member_id,members.name AS member,committees.committee_id,committees.name AS committee
+FROM committees
+INNER JOIN members ON committees.name = members.name;
+
+
 ```
 
 Output
@@ -30,7 +35,12 @@ Output
 Answer
 
 ```sql
-/* SOME SQL STATEMENT  */
+
+SELECT members.member_id,members.name AS member,committees.committee_id,committees.name AS committee
+FROM members
+LEFT JOIN committees ON committees.name = members.name;
+
+
 ```
 
 Output
@@ -55,7 +65,12 @@ Output
 Answer
 
 ```sql
-/* SOME SQL STATEMENT  */
+
+SELECT members.member_id,members.name AS member,committees.committee_id,committees.name AS committee
+FROM members
+LEFT JOIN committees ON members.name = committees.name
+WHERE committees.committee_id IS NULL
+
 ```
 
 Output
@@ -77,7 +92,10 @@ Output
 Answer
 
 ```sql
-/* SOME SQL STATEMENT  */
+
+SELECT members.member_id,members.name AS member,committees.committee_id,committees.name AS committee
+FROM committees
+LEFT JOIN members ON members.name = committees.name
 ```
 
 Output
@@ -101,7 +119,12 @@ Output
 Answer
 
 ```sql
-/* SOME SQL STATEMENT  */
+
+SELECT members.member_id,members.name AS member,committees.committee_id,committees.name AS committee
+FROM committees
+LEFT JOIN members ON members.name = committees.name
+WHERE committees.committee_id = 4 AND committees.name = 'Joe'
+
 ```
 
 Output

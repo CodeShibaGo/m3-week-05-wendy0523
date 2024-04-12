@@ -1,6 +1,5 @@
 # Exercise 1
 
-
 ## ex_01
 
 寫出可以得到下方結果的 SQL 語句
@@ -9,6 +8,8 @@ Answer
 
 ```sql
 /* SOME SQL STATEMENT  */
+SELECT lastName,firstName,jobTitle FROM employees where jobTitle LIKE 'Sales Rep'
+
 ```
 
 Output
@@ -46,6 +47,9 @@ Answer
 
 ```sql
 /* SOME SQL STATEMENT  */
+
+SELECT lastName,firstName,jobTitle FROM employees where jobTitle LIKE 'Sales Rep' and firstName like 'Leslie'
+
 ```
 
 Output
@@ -68,6 +72,11 @@ Answer
 
 ```sql
 /* SOME SQL STATEMENT  */
+
+SELECT lastName,firstName,officeCode FROM employees
+where officeCode < 4
+
+
 ```
 
 Output
@@ -90,7 +99,6 @@ Output
 10 rows in set (0.00 sec)
 ```
 
-
 ## ex_04
 
 寫出可以得到下方結果的 SQL 語句
@@ -99,6 +107,9 @@ Answer
 
 ```sql
 /* SOME SQL STATEMENT  */
+
+SELECT contactLastname,contactFirstname FROM customers order by contactLastname DESC,contactFirstname DESC
+
 ```
 
 Output
@@ -119,7 +130,6 @@ Output
 ....
 ```
 
-
 ## ex_05
 
 寫出可以得到下方結果的 SQL 語句
@@ -128,6 +138,9 @@ Answer
 
 ```sql
 /* SOME SQL STATEMENT  */
+
+SELECT lastname,firstname,officeCode FROM employees where officeCode >5
+
 ```
 
 Output
@@ -146,7 +159,6 @@ Output
 6 rows in set (0.00 sec)
 ```
 
-
 ## ex_06
 
 寫出可以得到下方結果的 SQL 語句
@@ -155,6 +167,9 @@ Answer
 
 ```sql
 /* SOME SQL STATEMENT  */
+
+SELECT lastName,firstName,jobTitle,officeCode FROM employees where jobTitle = 'Sales Rep' AND firstname = 'Leslie'
+
 ```
 
 Output
@@ -169,7 +184,6 @@ Output
 2 rows in set (0.00 sec)
 ```
 
-
 ## ex_07
 
 寫出可以得到下方結果的 SQL 語句
@@ -178,6 +192,9 @@ Answer
 
 ```sql
 /* SOME SQL STATEMENT  */
+
+SELECT lastName FROM employees  ORDER BY lastName
+
 ```
 
 Output
@@ -202,7 +219,6 @@ Output
 19 rows in set (0.01 sec)
 ```
 
-
 ## ex_08
 
 寫出可以得到下方結果的 SQL 語句
@@ -211,6 +227,9 @@ Answer
 
 ```sql
 /* SOME SQL STATEMENT  */
+
+SELECT customername,country,state FROM customers where country ='USA'AND STATE='CA'
+
 ```
 
 Output
@@ -242,6 +261,10 @@ Answer
 
 ```sql
 /* SOME SQL STATEMENT  */
+
+SELECT customername,country,state,creditlimit FROM customers where country ='USA'AND STATE='CA'AND creditlimit >100000.00
+
+
 ```
 
 Output
@@ -265,6 +288,10 @@ Answer
 
 ```sql
 /* SOME SQL STATEMENT  */
+
+SELECT officeCode,city,phone,country FROM offices where officeCode < 5
+
+
 ```
 
 Output
